@@ -72,8 +72,7 @@ class terms1State extends State<terms1> with TickerProviderStateMixin {
               InkWell(
                   splashColor: Colors.deepPurple,
                   onTap: (){
-                    Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>homePage()));
+                    Navigator.pushNamed(context, '/home');
                   },
                   child: longButton("Proceed")
               ),

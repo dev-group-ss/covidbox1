@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:path/path.dart';
 
 import 'package:flare_flutter/flare_controls.dart';
 import 'package:flare_splash_screen/flare_splash_screen.dart';
@@ -36,6 +37,7 @@ class homePageState extends State<homePage>{
   final GlobalKey<ScaffoldState> _scfldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context){
+    print(ModalRoute.of(context).settings.name);
     ht=MediaQuery.of(context).size.height;
     wt=MediaQuery.of(context).size.width;
 
@@ -76,11 +78,11 @@ class homePageState extends State<homePage>{
                       ),
                       title: Padding(
                         padding: EdgeInsets.only(left: wt*0.01),
-                        child: Text('Shreejeet Praveen'),
+                        child: Text('Meher Chaitanya'),
                       ),
                       subtitle: Padding(
                         padding: EdgeInsets.only(left: wt*0.01),
-                        child: Text('19MCMB16'),
+                        child: Text('19MCME12'),
                       ),
                     ),
                   ),

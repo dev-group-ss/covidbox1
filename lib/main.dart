@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flare_flutter/flare_controller.dart';
+import 'package:ui2/homePage.dart';
+import 'package:ui2/shareLocation.dart';
 import 'flrLoop.dart';
 import 'login.dart';
 import 'intro.dart';
@@ -39,13 +41,17 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         brightness:Brightness.light,
       ),
-      home: SplashScreen.navigate(
-        name: 'assets/flare/intro.flr',
-        next: (_) =>intro(title: 'CovidBox'),
-        until: () => Future.delayed(Duration(seconds: 4)),
-        startAnimation: '1',
-        backgroundColor: Color(0xff3a1e1e),
-      )
+      routes: {
+        "/": (context) => SplashScreen.navigate(
+          name: 'assets/flare/intro.flr',
+          next: (_) =>intro(title: 'CovidBox'),
+          until: () => Future.delayed(Duration(seconds: 4)),
+          startAnimation: '1',
+          backgroundColor: Color(0xff3a1e1e),
+        ),
+        "/home": (context) => homePage(),
+        "/shareloc": (context) => ShareLocation(),
+      },
     );
   }
 }

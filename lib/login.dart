@@ -192,7 +192,7 @@ class loginState extends State<login> with TickerProviderStateMixin {
    void signIn() async {
     try{
       print("pRoiasa1 1\n");
-        FirebaseUser user = (await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _pass)).user;
+//        FirebaseUser user = (await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _pass)).user;
         print("pRoiasa");
         Navigator.pop(context);
         Navigator.pop(context);
